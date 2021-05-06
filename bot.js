@@ -1,7 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios').default;
 // replace the value below with the Telegram token you receive from @BotFather
-const token = '1802666494:AAG8zrp0KgP3QrG3mFIjE0uKwYdlMoanIaU';
+const token = '';
 function chunk(array, size) {
     const chunked_arr = [];
     for (let i = 0; i < array.length; i++) {
@@ -132,7 +132,6 @@ bot.on('message', async (msg) => {
     const chatId = msg.chat.id;
 
     console.log(msg);
-    // send a message to the chat acknowledging receipt of their message
     const text = msg.text;
     console.log('hello', text)
     const selected = district.find(obj => obj.district_name === text);
